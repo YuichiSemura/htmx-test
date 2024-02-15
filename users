@@ -1,0 +1,8 @@
+<div>
+  <p>Name: <span id="name">semura-yuichi</span></p>
+  <p>Age: <span id="age">29</span></p>
+</div>
+<div>
+  <p>Name: <span id="name">gotoh-hitori</span></p>
+  <p>Age: <span id="age">16</span></p>
+</div>

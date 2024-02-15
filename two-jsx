@@ -1,0 +1,17 @@
+<div id="main">
+  <h2>hx-confirm</h2>
+  <div style="padding: 10px">
+    <code>
+      &lt;button hx-get=&quot;/users&quot; hx-target=&quot;#h2-b&quot;
+      hx-confirm=&quot;確認です。&quot;&gt;Click&lt;/button&gt;
+    </code>
+    <div>
+      <button hx-get="/users" hx-target="#h2-b" hx-confirm="確認です。">Click</button>
+    </div>
+    <h3 id="h2-b">ここに表示</h3>
+  </div>
+  <hr />
+
+  <button hx-get="/one-jsx" hx-target="#main">戻る</button>
+  <button hx-get="/three-jsx" hx-target="#main">進む</button>
+</div>

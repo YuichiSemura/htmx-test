@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTMX-test</title>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"></script>
+    <script src="https://unpkg.com/mustache@latest"></script>
+  </head>
+  <body>
+    <p id="target2">送信できたらここが変わるよ</p>
+    <div hx-ext="client-side-templates">
+      <button
+        id="example2-form"
+        hx-get="https://jsonplaceholder.typicode.com/users"
+        hx-target="#target2"
+        mustache-array-template="hello-array-mustache"
+      >
+        クリック
+      </button>
+    </div>
+    <template id="hello-array-mustache">
+      <div>
+        {{#data}}
+        <p>No.{{id}} : こんにちは。私は{{name}}です。 emailは {{email}} です。</p>
+        {{/data}}
+      </div>
+    </template>
+
+    <p id="target">ユーザを表示</p>
+    <div hx-ext="client-side-templates">
+      <button id="example2-form" hx-get="/users.json" hx-target="#target" mustache-array-template="array-mustache1">
+        クリック
+      </button>
+    </div>
+    <template id="array-mustache1">
+      <div>
+        {{#data}}
+        <p>Name: <span id="name">{{name}}</span></p>
+        <p>Age: <span id="age">{{age}}</span></p>
+        {{/data}}
+      </div>
+    </template>
+  </body>
+</html>

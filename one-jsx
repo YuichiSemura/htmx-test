@@ -1,0 +1,44 @@
+<div id="main">
+  <h2>普通のやつ</h2>
+  <div style="padding: 10px">
+    <code> &lt;button hx-get=&quot;/users&quot;&gt;Click&lt;/button&gt; </code>
+    <div>
+      <button hx-get="/users">Click</button>
+    </div>
+  </div>
+  <hr />
+
+  <h2>hx-swap="outerHTML"</h2>
+  <div style="padding: 10px">
+    <code> &lt;button hx-get=&quot;/users&quot; hx-swap=&quot;outerHTML&quot;&gt;Click&lt;/button&gt; </code>
+    <div>
+      <button hx-get="/users" hx-swap="outerHTML">Click</button>
+    </div>
+  </div>
+  <hr />
+
+  <h2>hx-target="#h2"</h2>
+  <div style="padding: 10px">
+    <code> &lt;button hx-get=&quot;/users&quot; hx-target=&quot;#h2&quot;&gt;Click&lt;/button&gt; </code>
+    <div>
+      <button hx-get="/users" hx-target="#h2-a">Click</button>
+    </div>
+    <h3 id="h2-a">ここに表示</h3>
+  </div>
+  <hr />
+
+  <h2>hx-confirm</h2>
+  <div style="padding: 10px">
+    <code>
+      &lt;button hx-get=&quot;/users&quot; hx-target=&quot;#h2-b&quot;
+      hx-confirm=&quot;確認です。&quot;&gt;Click&lt;/button&gt;
+    </code>
+    <div>
+      <button hx-get="/users" hx-target="#h2-b" hx-confirm="確認です。">Click</button>
+    </div>
+    <h3 id="h2-b">ここに表示</h3>
+  </div>
+  <hr />
+
+  <button hx-get="/two-jsx" hx-target="#main">進む</button>
+</div>

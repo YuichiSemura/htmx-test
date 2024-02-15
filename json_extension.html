@@ -13,28 +13,14 @@
     <script src="https://unpkg.com/mustache@latest"></script>
   </head>
   <body>
-    <p id="target2">送信できたらここが変わるよ</p>
+    <p id="target">ユーザを表示</p>
     <div hx-ext="client-side-templates">
       <button
         id="example2-form"
-        hx-get="https://jsonplaceholder.typicode.com/users"
-        hx-target="#target2"
-        mustache-array-template="hello-array-mustache"
+        hx-get="https://my-json-server.typicode.com/YuichiSemura/htmx-test-db/users"
+        hx-target="#target"
+        mustache-array-template="array-mustache1"
       >
-        クリック
-      </button>
-    </div>
-    <template id="hello-array-mustache">
-      <div>
-        {{#data}}
-        <p>No.{{id}} : こんにちは。私は{{name}}です。 emailは {{email}} です。</p>
-        {{/data}}
-      </div>
-    </template>
-
-    <p id="target">ユーザを表示</p>
-    <div hx-ext="client-side-templates">
-      <button id="example2-form" hx-get="/users.json" hx-target="#target" mustache-array-template="array-mustache1">
         クリック
       </button>
     </div>

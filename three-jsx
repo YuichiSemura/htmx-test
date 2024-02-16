@@ -1,5 +1,5 @@
 <div id="main">
-  <h1>2ページ</h1>
+  <h1>3ページ</h1>
   <h2>hx-confirm</h2>
   <div style="padding: 10px">
     <code>
@@ -13,6 +13,5 @@
   </div>
   <hr />
 
-  <button hx-get="./one-jsx" hx-target="#main">戻る</button>
-  <button hx-get="./three-jsx" hx-target="#main">進む</button>
+  <button hx-get="./two-jsx" hx-target="#main">戻る</button>
 </div>
